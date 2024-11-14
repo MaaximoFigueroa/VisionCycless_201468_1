@@ -9,6 +9,7 @@
     <style>
         body {
             padding: 20px;
+            padding-top: 60px;
             
         }
         .bike-card {
@@ -28,14 +29,8 @@
             justify-content: space-between;
             height: 100%;
         }
-        .header {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        .navbar {
-            margin-bottom: 20px;
-        }
+       
+        
         .card-text {
             margin: 10px 0;
         }
@@ -191,90 +186,101 @@
             justify-content: space-between;
             margin: 10px 0;
         }
-       .navbar-nav .nav-link {
-    color: #333; /* Cambiar color del texto a un gris oscuro */
+        .header {
+            padding-top: 20px;
+       margin-bottom: 20px; 
+    text-align: center;
 }
-
-.navbar-nav .nav-link:hover {
-    color: #007bff; /* Cambiar color al pasar el ratón por encima */
+.navbar {
+ 
+    padding-top: 10px; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
-
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#hero">Vision Cycless</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bicicletas.html">Bicicletas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mail.google.com/">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openCart()">
+                            <i class="fas fa-shopping-cart cart-icon"></i> (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">
+                            <i class="bi bi-person-fill"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
     <div class="header">
         <h1>VisionCycless</h1>
     </div>
 
-   
- 
-
-    <nav class="navbar navbar-expand-lg fixed-top bg-white">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Vision Cycless</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="bicicletas.html">Bicicletas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZXhxqCgdrGMRNXKGMBqRDhZZwpcmmfgcjQqvGMcPLzLgVfjNDgQjNCLMGjfVtdVcTQwgV">Soporte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="openCart()">
-                        <i class="fas fa-shopping-cart cart-icon"></i> (<span id="cartCount">0</span>)
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Login.html">
-                        <i class="bi bi-person-fill"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-    <div class="contenido">
-        <div class="mostrador" id="mostrador">
-            <div class="fila">
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalcity.cl/cdn/shop/products/CascoIntegralRampageBlancoFox_3_600x.jpg?v=1670201562" alt="Casco Integral Rampage Blanco Fox">
-                    <p class="descripcion">Casco Integral Rampage Blanco Fox</p>
-                    <span class="precio">$99.995</span>
+    <div class="contenido d-flex justify-content-center">
+        <div class="mostrador container">
+            <div class="row justify-content-center">
+                <!-- Cada "item" se centra con flexbox -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="item text-center d-flex flex-column align-items-center" onclick="cargar(this)">
+                        <img src="https://www.pedalcity.cl/cdn/shop/products/CascoIntegralRampageBlancoFox_3_600x.jpg?v=1670201562" alt="Casco Integral Rampage Blanco Fox" class="img-fluid mb-3">
+                        <p class="descripcion">Casco Integral Rampage Blanco Fox</p>
+                        <span class="precio">$99.995</span>
+                    </div>
                 </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalcity.cl/cdn/shop/products/timthumb_8e4b1552-ca07-48f2-ba0d-cf0a777c552b_600x.jpg?v=1646320150" alt="Cadenas Shimano CN-HG53 9 Velocidades 116L">
-                    <p class="descripcion">Cadenas Shimano CN-HG53 9 Velocidades 116L</p>
-                    <span class="precio">$32.990</span>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="item text-center d-flex flex-column align-items-center" onclick="cargar(this)">
+                        <img src="https://www.pedalcity.cl/cdn/shop/products/timthumb_8e4b1552-ca07-48f2-ba0d-cf0a777c552b_600x.jpg?v=1646320150" alt="Cadenas Shimano CN-HG53 9 Velocidades 116L" class="img-fluid mb-3">
+                        <p class="descripcion">Cadenas Shimano CN-HG53 9 Velocidades 116L</p>
+                        <span class="precio">$32.990</span>
+                    </div>
                 </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalcity.cl/cdn/shop/files/NeumaticoMaxxisMinionDHRII29X2.40WTExoTr60TPI_2_600x.jpg?v=1692637997" alt="Neumático Maxxis Minion DHR II 29X2.40 WT Exo/Tr 60 TPI">
-                    <p class="descripcion">Neumático Maxxis Minion DHR II 29X2.40 WT Exo/Tr 60 TPI</p>
-                    <span class="precio">$71.000</span>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="item text-center d-flex flex-column align-items-center" onclick="cargar(this)">
+                        <img src="https://www.pedalcity.cl/cdn/shop/files/NeumaticoMaxxisMinionDHRII29X2.40WTExoTr60TPI_2_600x.jpg?v=1692637997" alt="Neumático Maxxis Minion DHR II 29X2.40 WT Exo/Tr 60 TPI" class="img-fluid mb-3">
+                        <p class="descripcion">Neumático Maxxis Minion DHR II 29X2.40 WT Exo/Tr 60 TPI</p>
+                        <span class="precio">$71.000</span>
+                    </div>
                 </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalcity.cl/cdn/shop/products/RuedasEstabilizadorasRegulablesparabicicletasdeninos_600x.png?v=1657227874" alt="Ruedas estabilizadoras para bicicletas aro 12-20"">
-                    <p class="descripcion">Ruedas estabilizadoras para bicicletas aro 12-20"</p>
-                    <span class="precio">$13.990</span>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="item text-center d-flex flex-column align-items-center" onclick="cargar(this)">
+                        <img src="https://www.pedalcity.cl/cdn/shop/products/RuedasEstabilizadorasRegulablesparabicicletasdeninos_600x.png?v=1657227874" alt="Ruedas estabilizadoras para bicicletas aro 12-20" class="img-fluid mb-3">
+                        <p class="descripcion">Ruedas estabilizadoras para bicicletas aro 12-20"</p>
+                        <span class="precio">$13.990</span>
+                    </div>
                 </div>
             </div>
         </div>
-            
-  </div>
+    </div>
+    
+    
 
         <div class="seleccion" id="seleccion">
             <span class="cerrar" onclick="cerrar()">x</span>
@@ -412,6 +418,7 @@
         </div>
     </div>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
