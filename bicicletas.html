@@ -9,7 +9,7 @@
     <style>
         body {
             padding: 20px;
-            
+            padding-top: 60px;
         }
         .bike-card {
             margin-bottom: 20px;
@@ -28,14 +28,8 @@
             justify-content: space-between;
             height: 100%;
         }
-        .header {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        .navbar {
-            margin-bottom: 20px;
-        }
+       
+       
         .card-text {
             margin: 10px 0;
         }
@@ -191,155 +185,261 @@
             justify-content: space-between;
             margin: 10px 0;
         }
-       .navbar-nav .nav-link {
-    color: #333; /* Cambiar color del texto a un gris oscuro */
+        /* Centrar todo el contenido */
+.contenido {
+    display: flex;
+   
+ }
+ .header {
+            padding-top: 20px;
+       margin-bottom: 20px; 
+    text-align: center;
 }
-
-.navbar-nav .nav-link:hover {
-    color: #007bff; /* Cambiar color al pasar el ratón por encima */
+.navbar {
+ 
+    padding-top: 10px; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
-
+       
     </style>
 </head>
 <body>
+   
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#hero">Vision Cycless</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bicicletas.html">Bicicletas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mail.google.com/">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openCart()">
+                            <i class="fas fa-shopping-cart cart-icon"></i> (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">
+                            <i class="bi bi-person-fill"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#hero">Vision Cycless</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bicicletas.html">Bicicletas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mail.google.com/">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openCart()">
+                            <i class="fas fa-shopping-cart cart-icon"></i> (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">
+                            <i class="bi bi-person-fill"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="header">
         <h1>VisionCycless</h1>
     </div>
-
-   
-   
-
-  <nav class="navbar navbar-expand-lg fixed-top bg-white">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Vision Cycless</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="bicicletas.html">Bicicletas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZXhxqCgdrGMRNXKGMBqRDhZZwpcmmfgcjQqvGMcPLzLgVfjNDgQjNCLMGjfVtdVcTQwgV">Soporte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="openCart()">
-                        <i class="fas fa-shopping-cart cart-icon"></i> (<span id="cartCount">0</span>)
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Login.html">
-                        <i class="bi bi-person-fill"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-   
-
-    <div class="contenido">
+      <div class="contenido"> 
         <div class="mostrador" id="mostrador">
             <div class="fila">
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://rockandroad.cl/cdn/shop/files/ZpmBkB5LeNNTxSPG_MY24_700x.webp?v=1725401116" alt="Santa Cruz V10 CC Mullet Kit S Negro">
-                    <p class="descripcion">Santa Cruz V10 CC Mullet Kit S Negro</p>
-                    <span class="precio">$8.490.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://specialized.com.tw/cdn/shop/files/95223-07_LEVO-SW-CARBON-G3-GLDPRL-CARB-GLDPRL_HERO_7b49de9e-cd5e-490e-8c3e-1e2e371f2171_600x.png?v=1725249741" alt="S-Works Turbo Levo T-Type">
-                    <p class="descripcion">S-Works Turbo Levo T-Type</p>
-                    <span class="precio">$12.500.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://rideshop.cl/cdn/shop/files/Hybrid-Enduro-7-1-Raw-Sachs_600x600_2x_5fff4a22-7bdd-49c3-b253-73d58bc707bb_800x.png?v=1707934795" alt="Nox Hybrid Enduro 7.1 Ultra 2024">
-                    <p class="descripcion">Nox Hybrid Enduro 7.1 Ultra 2024</p>
-                    <span class="precio">$9.390.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://rockandroad.cl/cdn/shop/files/c22_c25152u_moterra_neo_crb_1_abb_pd_1_1_700x.jpg?v=1706036233" alt="Cannondale Bicicleta Electrica Moterra Neo Carbon 1">
-                    <p class="descripcion">Cannondale Bicicleta Electrica Moterra Neo Carbon 1</p>
-                    <span class="precio">$4.999.990</span>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://rideshop.cl/cdn/shop/files/fuelex7deorext_23_36347_b_primar_800x.png?v=1701270877" alt="Bicicleta Enduro Trek Fuel EX 7 Deore XT Azul">
-                    <p class="descripcion">Bicicleta Enduro Trek Fuel EX 7 Deore XT Azul</p>
-                    <span class="precio">$3.790.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/ab72f268f9b60d5f8b3135ae4ddf904e.jpg?v=1723664070" alt="BICICLETA MTB GIANT REIGN ADVANCED PRO 0">
-                    <p class="descripcion">BICICLETA MTB GIANT REIGN ADVANCED PRO 0</p>
-                    <span class="precio">$9.990.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/REIGNE_1MY23.webp?v=1728318221" alt="BICICLETA ELÉCTRICA GIANT REIGN E+ 1">
-                    <p class="descripcion">BICICLETA ELÉCTRICA GIANT REIGN E+ 1</p>
-                    <span class="precio">$8.849.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/fea09e92db4e7cc38b1043639b4c07a9.jpg?v=1723664181" alt="BICICLETA MTB GIANT TRANCE X ADVANCED PRO 29 1">
-                    <p class="descripcion">BICICLETA MTB GIANT TRANCE X ADVANCED PRO 29 1</p>
-                    <span class="precio">$7.590.000</span>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/5583f19301e84c31d0fb735b45d869e0_69e961ea-4ec5-471b-8e53-8c2cf33dadd0.jpg?v=1723664037" alt="BICICLETA MTB LIV INTRIGUE ADVANCED PRO 29 2">
-                    <p class="descripcion">BICICLETA MTB LIV INTRIGUE ADVANCED PRO 29 2</p>
-                    <span class="precio">$4.690.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/REVOLTXADVANCEDPRO1.webp?v=1728318733" alt="BICICLETA GRAVEL GIANT REVOLT X ADVANCED PRO 1">
-                    <p class="descripcion">BICICLETA GRAVEL GIANT REVOLT X ADVANCED PRO 1</p>
-                    <span class="precio">$6.290.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/DevoteAdvanced22022.jpg?v=1728398017" alt="BICICLETA GRAVEL LIV DEVOTE ADVANCED 2">
-                    <p class="descripcion">BICICLETA GRAVEL LIV DEVOTE ADVANCED 2</p>
-                    <span class="precio">$2.990.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/LANGMAADVANCEDPRO0DISCMY24-1.webp?v=1724010423" alt="BICICLETA RUTA LIV LANGMA ADVANCED PRO 0 DISC">
-                    <p class="descripcion">BICICLETA RUTA LIV LANGMA ADVANCED PRO 0 DISC</p>
-                    <span class="precio">$6.549.000</span>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/ESCAPE2DISCMY22.jpg?v=1725975204" alt="BICICLETA URBANA GIANT ESCAPE 2 DISC">
-                    <p class="descripcion">BICICLETA URBANA GIANT ESCAPE 2 DISC</p>
-                    <span class="precio">$649.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/fdd0d6ba6c2f3779efc786d91160ec17.png?v=1723664725" alt="BICICLETA GRAVEL GIANT REVOLT ADVANCED 0">
-                    <p class="descripcion">BICICLETA GRAVEL GIANT REVOLT ADVANCED 0</p>
-                    <span class="precio">$3.790.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/7ecc5326505cc5de8d7559725daa75da.jpg?v=1725888536" alt="BICICLETA URBANA MOMENTUM IRIDE UX 3S">
-                    <p class="descripcion">BICICLETA URBANA MOMENTUM IRIDE UX 3S</p>
-                    <span class="precio">$749.000</span>
-                </div>
-                <div class="item" onclick="cargar(this)">
-                    <img src="https://www.pedalmarket.cl/cdn/shop/files/8b02cb550c386c30b4cd52b304be5d51.jpg?v=1725887544" alt="BICICLETA URBANA LIV TEMPT 29 3">
-                    <p class="descripcion">BICICLETA URBANA LIV TEMPT 29 3</p>
-                    <span class="precio">$649.000</span>
-                </div>
-            </div>
-        </div>
-
+               
+                      
+                        <div class="container"> 
+                            <div class="row justify-content-center" id="mostrador">
+                                <!-- Producto 1 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://rockandroad.cl/cdn/shop/files/ZpmBkB5LeNNTxSPG_MY24_700x.webp?v=1725401116" alt="Santa Cruz V10 CC Mullet Kit S Negro">
+                                        <p class="descripcion">Santa Cruz V10 CC Mullet Kit S Negro</p>
+                                        <span class="precio">$8.490.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 2 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://specialized.com.tw/cdn/shop/files/95223-07_LEVO-SW-CARBON-G3-GLDPRL-CARB-GLDPRL_HERO_7b49de9e-cd5e-490e-8c3e-1e2e371f2171_600x.png?v=1725249741" alt="S-Works Turbo Levo T-Type">
+                                        <p class="descripcion">S-Works Turbo Levo T-Type</p>
+                                        <span class="precio">$12.500.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 3 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://rideshop.cl/cdn/shop/files/Hybrid-Enduro-7-1-Raw-Sachs_600x600_2x_5fff4a22-7bdd-49c3-b253-73d58bc707bb_800x.png?v=1707934795" alt="Nox Hybrid Enduro 7.1 Ultra 2024">
+                                        <p class="descripcion">Nox Hybrid Enduro 7.1 Ultra 2024</p>
+                                        <span class="precio">$9.390.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 4 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://rockandroad.cl/cdn/shop/files/c22_c25152u_moterra_neo_crb_1_abb_pd_1_1_700x.jpg?v=1706036233" alt="Cannondale Bicicleta Electrica Moterra Neo Carbon 1">
+                                        <p class="descripcion">Cannondale Bicicleta Electrica Moterra Neo Carbon 1</p>
+                                        <span class="precio">$4.999.990</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 5 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://rideshop.cl/cdn/shop/files/fuelex7deorext_23_36347_b_primar_800x.png?v=1701270877" alt="Bicicleta Enduro Trek Fuel EX 7 Deore XT Azul">
+                                        <p class="descripcion">Bicicleta Enduro Trek Fuel EX 7 Deore XT Azul</p>
+                                        <span class="precio">$3.790.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 6 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/ab72f268f9b60d5f8b3135ae4ddf904e.jpg?v=1723664070" alt="BICICLETA MTB GIANT REIGN ADVANCED PRO 0">
+                                        <p class="descripcion">BICICLETA MTB GIANT REIGN ADVANCED PRO 0</p>
+                                        <span class="precio">$9.990.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 7 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/REIGNE_1MY23.webp?v=1728318221" alt="BICICLETA ELÉCTRICA GIANT REIGN E+ 1">
+                                        <p class="descripcion">BICICLETA ELÉCTRICA GIANT REIGN E+ 1</p>
+                                        <span class="precio">$8.849.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 8 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/fea09e92db4e7cc38b1043639b4c07a9.jpg?v=1723664181" alt="BICICLETA MTB GIANT TRANCE X ADVANCED PRO 29 1">
+                                        <p class="descripcion">BICICLETA MTB GIANT TRANCE X ADVANCED PRO 29 1</p>
+                                        <span class="precio">$7.590.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 9 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/5583f19301e84c31d0fb735b45d869e0_69e961ea-4ec5-471b-8e53-8c2cf33dadd0.jpg?v=1723664037" alt="BICICLETA MTB LIV INTRIGUE ADVANCED PRO 29 2">
+                                        <p class="descripcion">BICICLETA MTB LIV INTRIGUE ADVANCED PRO 29 2</p>
+                                        <span class="precio">$4.690.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 10 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/REVOLTXADVANCEDPRO1.webp?v=1728318733" alt="BICICLETA GRAVEL GIANT REVOLT X ADVANCED PRO 1">
+                                        <p class="descripcion">BICICLETA GRAVEL GIANT REVOLT X ADVANCED PRO 1</p>
+                                        <span class="precio">$6.290.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 11 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/DevoteAdvanced22022.jpg?v=1728398017" alt="BICICLETA GRAVEL LIV DEVOTE ADVANCED 2">
+                                        <p class="descripcion">BICICLETA GRAVEL LIV DEVOTE ADVANCED 2</p>
+                                        <span class="precio">$2.990.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 12 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/LANGMAADVANCEDPRO0DISCMY24-1.webp?v=1724010423" alt="BICICLETA RUTA LIV LANGMA ADVANCED PRO 0 DISC">
+                                        <p class="descripcion">BICICLETA RUTA LIV LANGMA ADVANCED PRO 0 DISC</p>
+                                        <span class="precio">$6.549.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 13 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/ESCAPE2DISCMY22.jpg?v=1725975204" alt="BICICLETA URBANA GIANT ESCAPE 2 DISC">
+                                        <p class="descripcion">BICICLETA URBANA GIANT ESCAPE 2 DISC</p>
+                                        <span class="precio">$649.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 14 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/fdd0d6ba6c2f3779efc786d91160ec17.png?v=1723664725" alt="BICICLETA GRAVEL GIANT REVOLT ADVANCED 0">
+                                        <p class="descripcion">BICICLETA GRAVEL GIANT REVOLT ADVANCED 0</p>
+                                        <span class="precio">$3.790.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 15 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/7ecc5326505cc5de8d7559725daa75da.jpg?v=1725888536" alt="BICICLETA URBANA MOMENTUM IRIDE UX 3S">
+                                        <p class="descripcion">BICICLETA URBANA MOMENTUM IRIDE UX 3S</p>
+                                        <span class="precio">$749.000</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Producto 16 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                                    <div class="item text-center" onclick="cargar(this)">
+                                        <img class="img-fluid" src="https://www.pedalmarket.cl/cdn/shop/files/8b02cb550c386c30b4cd52b304be5d51.jpg?v=1725887544" alt="BICICLETA URBANA LIV TEMPT 29 3">
+                                        <p class="descripcion">BICICLETA URBANA LIV TEMPT 29 3</p>
+                                        <span class="precio">$649.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
         <div class="seleccion" id="seleccion">
             <span class="cerrar" onclick="cerrar()">x</span>
             <div class="info">
@@ -476,6 +576,7 @@
         </div>
     </div>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
